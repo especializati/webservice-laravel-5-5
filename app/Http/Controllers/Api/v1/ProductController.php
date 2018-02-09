@@ -16,7 +16,7 @@ class ProductController extends Controller
     /**
      * DI of \App\Models\Product
      *
-     * @param  \App\Http\Requests\StoreUpdateProductApiValidate $request
+     * @param  \App\Models\Product $product
      * @return \Illuminate\Http\Response
      */
     public function __construct(Product $product)
