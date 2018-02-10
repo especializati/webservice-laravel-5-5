@@ -12,6 +12,9 @@ $this->group(['prefix' => 'v1'], function(){
 		// Controller Resource API, Products
 	    $this->apiResource('products', 'Api\v1\ProductController');
 
+	    // Controller Resource API, Tasks
+	    $this->apiResource('tasks', 'Api\v1\TaskController');
+
 	});
    
 });
