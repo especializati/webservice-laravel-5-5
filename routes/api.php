@@ -7,13 +7,13 @@ $this->group(['prefix' => 'v1'], function(){
     $this->post('auth-refresh', 'Auth\AuthApiController@refreshToken');
    
     // Routes restrict, authentication by JWT: https://github.com/tymondesigns/jwt-auth
-	$this->group(['middleware' => []], function () {
+	$this->group(['middleware' => [], 'namespace' => 'Api\v1'], function () {
 
 		// Controller Resource API, Products
-	    $this->apiResource('products', 'Api\v1\ProductController');
+	    $this->apiResource('products', 'ProductController');
 
 	    // Controller Resource API, Tasks
-	    $this->apiResource('tasks', 'Api\v1\TaskController');
+	    $this->apiResource('tasks', 'TaskController');
 
 	});
    
