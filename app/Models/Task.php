@@ -19,7 +19,7 @@ class Task extends Model
      */
     public function getResults(Array $data, int $totalPage)
     {
-    	if (!isset($data['name']) && !isset($data['description']) && !isset($data['filter']))
+    	if (!isset($data['name']) && !isset($data['archive']))
     		return $this->paginate($totalPage);
 
     	return $this->where(function ($query) use ($data) {
