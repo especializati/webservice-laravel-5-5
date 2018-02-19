@@ -25,7 +25,7 @@ class Task extends Model
     	return $this->where(function ($query) use ($data) {
     				if (isset($data['name'])) {
     					$name = $data['name'];
-    					$queyr->where('name', 'LIKE', "%{$name}%");
+    					$query->where('name', 'LIKE', "%{$name}%");
     				}
 
     				if (isset($data['archive']))
