@@ -24,10 +24,10 @@ class StoreUpdateTaskValidate extends FormRequest
     public function rules()
     {
         // get id task in position URL (default null)
-        $id = $this->segment(4);
+        // $id = $this->segment(4);
 
         return [
-            'name' => "required|unique:users,name,{$id},id",
+            'name' => "required|unique:users,name,{$this->id},id",
         ];
     }
 }
